@@ -1,0 +1,143 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 0.875rem;
+	line-height: 1.6;
+	color: #333;
+	background: #fff;
+	display: grid;
+	grid-template-columns: 1fr 500px;
+	grid-template-areas: "work sidebar";
+	min-height: 100vh;
+}
+
+a {
+	color: inherit;
+	transition: opacity 0.2s;
+}
+
+a:hover {
+	opacity: 0.6;
+}
+
+/* Sidebar (intro + resume) */
+
+#sidebar {
+	grid-area: sidebar;
+	position: sticky;
+	top: 0;
+	align-self: start;
+	max-height: 100vh;
+	overflow-y: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	padding: 20px;
+}
+
+#sidebar::-webkit-scrollbar {
+	display: none;
+}
+
+#intro h1 {
+	font-size: 1.4em;
+	font-weight: 400;
+	margin-bottom: 1em;
+}
+
+#intro h1 a {
+	text-decoration: none;
+}
+
+#intro p {
+	margin-bottom: 1em;
+}
+
+/* Work / Gallery */
+
+#work {
+	grid-area: work;
+	padding: 20px;
+}
+
+#work section > div {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 10px;
+}
+
+#work figure {
+	overflow: hidden;
+	aspect-ratio: 4/3;
+}
+
+#work figure a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#work figure img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+/* Resume */
+
+#resume {
+	margin-top: 2em;
+}
+
+#resume section {
+	margin-bottom: 2em;
+}
+
+#resume h2 {
+	font-size: 1em;
+	font-weight: 700;
+	margin-bottom: 0.5em;
+}
+
+#resume section > div {
+	margin-bottom: 0.25em;
+}
+
+#resume section > div[data-year]::before {
+	content: attr(data-year);
+	margin-right: 0.5em;
+	opacity: 0.4;
+}
+
+#resume p {
+	margin-top: 1em;
+	font-size: 0.9em;
+	opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+	body {
+		grid-template-columns: 1fr;
+		grid-template-areas: "sidebar" "work";
+	}
+
+	#sidebar {
+		position: static;
+		max-height: none;
+		overflow-y: visible;
+		padding: 40px 20px;
+	}
+
+	#work {
+		padding: 0 20px 40px;
+	}
+
+	#work section > div {
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	}
+}
