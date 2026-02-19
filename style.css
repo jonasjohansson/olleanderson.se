@@ -43,6 +43,12 @@ a:hover {
 	display: none;
 }
 
+#logo {
+	width: 48px;
+	height: 48px;
+	margin-bottom: 1em;
+}
+
 #intro h1 {
 	font-size: 1.4em;
 	font-weight: 400;
@@ -55,6 +61,11 @@ a:hover {
 
 #intro p {
 	margin-bottom: 1em;
+}
+
+#portrait {
+	width: 100%;
+	margin-top: 1em;
 }
 
 /* Work / Gallery */
