@@ -12,7 +12,7 @@ body {
 	background: #fff;
 	display: grid;
 	grid-template-columns: 1fr 500px;
-	grid-template-areas: ". work-heading" "work sidebar";
+	grid-template-areas: "work work-heading" "work sidebar";
 	grid-template-rows: auto 1fr;
 	min-height: 100vh;
 }
@@ -38,6 +38,7 @@ a:hover {
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 	padding: 20px;
+	border-left: 1px solid lightgray;
 }
 
 #sidebar::-webkit-scrollbar {
@@ -76,6 +77,7 @@ a:hover {
 	padding: 20px 20px 0;
 	font-size: 1.8em;
 	font-weight: 400;
+	border-left: 1px solid lightgray;
 }
 
 /* Work / Gallery */
@@ -158,6 +160,7 @@ a:hover {
 		max-height: none;
 		overflow-y: visible;
 		padding: 40px 20px;
+		border-left: none;
 	}
 
 	#work {
