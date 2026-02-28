@@ -12,7 +12,8 @@ body {
 	background: #fff;
 	display: grid;
 	grid-template-columns: 1fr 500px;
-	grid-template-areas: "work sidebar";
+	grid-template-areas: "work-heading ." "work sidebar";
+	grid-template-rows: auto 1fr;
 	min-height: 100vh;
 }
 
@@ -66,6 +67,15 @@ a:hover {
 #portrait {
 	width: 100%;
 	margin-top: 1em;
+}
+
+/* Work heading (desktop only) */
+
+#work-heading {
+	grid-area: work-heading;
+	padding: 20px 20px 0;
+	font-size: 1.8em;
+	font-weight: 400;
 }
 
 /* Work / Gallery */
@@ -136,6 +146,11 @@ a:hover {
 	body {
 		grid-template-columns: 1fr;
 		grid-template-areas: "sidebar" "work";
+		grid-template-rows: auto;
+	}
+
+	#work-heading {
+		display: none;
 	}
 
 	#sidebar {
