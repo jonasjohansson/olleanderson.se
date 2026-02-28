@@ -11,8 +11,8 @@ body {
 	color: #333;
 	background: #fff;
 	display: grid;
-	grid-template-columns: 1fr 500px;
-	grid-template-areas: "work-heading ." "work sidebar";
+	grid-template-columns: 500px 1fr;
+	grid-template-areas: "work-heading ." "sidebar work";
 	grid-template-rows: auto 1fr;
 	min-height: 100vh;
 }
